@@ -34,6 +34,12 @@
 
   <div class="row">
     <div class="col-xs-12">
+    <% if enhanced_cart.length == 0 %>
+    <p>THE CART IS EMPTY BITCH BUY SOMETHING YOU POOR MF</p>
+    <a href = "/">Go Back TO HOME PAGE I DARE YOU</a>
+    <% else %>
+    
+
       <%= form_tag orders_path do %>
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -45,6 +51,7 @@
           data-email="kvirani@gmail.com"
           data-currency="cad">
         </script>
+      <% end %>
       <% end %>
     </div>
   </div>
